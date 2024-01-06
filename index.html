@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gold Medal AutoMotive</title>
+    <link rel="icon" href="assets/img/logo.png" />
+    <meta
+      name="viewport"
+      content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.7/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+  background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #f39c12;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #f39c12;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #f39c12;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+ 
+#db_btn_signIn {
+  width: 120px;
+  height: 35px;
+  position: static;
+  left: 130%;
+  top: 41%;
+  right: 100%;
+  margin: 10px;
+  padding: 0;
+  color: #f39c12;
+  border-color: black;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  
+}
+#db_btn_signIn:hover {
+  background-color: white;
+  color: #f39c12;
+  border-color: white;
+}
+
+#db_btn_sign_a {
+  text-decoration: none;
+  color:  #f39c12;
+  ;
+}
+
+
+#db_btn_regi_a {
+  text-decoration: none;
+  color: #f39c12;
+  ;
+}
+
+#db_btn_regi_a:hover {
+  background-color: white;
+  color: #f39c12;
+}
+#db_btn_regi {
+  width: 120px;
+  height: 35px;
+  position: static;
+  left: 110%;
+  top: 41.9%;
+  right: 100%;
+  margin: 10px;
+  padding: 0;
+  color: #f39c12;
+  border-color:black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+@media (max-width: 600px) {
+  #db_btn_signIns, #db_btn_regis {
+    width: 40%; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    /* other styles */
+  }
+}
+#db_btn_regi:hover {
+  background-color: rgb(31, 22, 22);
+  color: white;
+  border-color: white;
+  background-color: white;
+}
+ </style>
+  <body>
+    <section id="db_navbar">
+      <div id="db_navBarCaption">
+        <img id="db_logo" src="assets/img/logo.png" alt="image" />
+        <h1 id="db_title_name"></h1>
+        <div id="start_buttons">
+          <button type="button" class="btn" id="db_btn_signIn">
+            <a href="login.php" id="db_btn_sign_a">login</a>
+          </button>
+          <button type="button" class="btn" id="db_btn_regi">
+            <a href="register.php" id="db_btn_regi_a">Register</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="db_mainWall" class="slider">
+      <div id="db_mainCaption" class="caption">
+        <h1 id="db_h1">Moto store</h1>
+        <p id="db_p">Online Car Rental Service</p>
+      </div>
+    </section>
+    <section class="sectionArea">
+      <div class="featuresTop">
+        <h2 id="db_newCarReviews">New Car Reviews</h2>
+        <p>Our expert reviewers report back with the latest</p>
+      </div>
+      <div class="featuresBody">
+        <div class="container">
+          <div class="col3">
+            <div class="item">
+              <div class="zoom">
+                <img src="assets/img/cars/2021%20dodge.jpg" />
+              </div>
+              <div class="itemText">
+                <h3>2021 Dodge Challenger</h3>
+                <br>
+                <a href="cardetalis.html" class="btnDetails" id="db_car1">
+                  More Details</a
+                  >
+              </div>
+            </div>
+          </div>
+
+          <div class="col3">
+            <div class="item">
+              <div class="zoom">
+                <img src="assets/img/cars/2021-Chevrolet-Camaro%20(1).jpg" />
+              </div>
+              <div class="itemText">
+                <h3>2021 Chevrolet Camaro</h3>
+                <br>
+                <a href="cardetalis.html" class="btnDetails" id="db_car2">
+                  More Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col3">
+            <div class="item">
+              <div class="zoom">
+                <img src="assets/img/cars/2022-BMW-8_Series.jpg" />
+              </div>
+              <div class="itemText">
+                <h3>2022 BM2 8 Series</h3>
+                <br>
+                <a href="cardetalis.html" class="btnDetails" id="db_car3">
+                  More Details</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="featuresBody">
+        <div class="container">
+          <div class="col3">
+            <div class="item">
+              <div class="zoom">
+                <img src="assets/img/cars/2021-Hyundai-Elantra.jpg" />
+              </div>
+              <div class="itemText">
+                <h3>2021 Hyundai Elantra</h3>
+                <br>
+                <a href="cardetalis.html" class="btnDetails" id="db_car4">
+                  More Details</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col3">
+              <div class="item">
+              <div class="zoom">
+                <img src="assets/img/cars/2021-Mazda-Mazda3.jpg" />
+              </div>
+              <div class="itemText">
+                <h3>2021 Mazda Mazda</h3>
+                <br>
+                <a href="cardetalis.html" class="btnDetails" id="db_car5">
+                  More Details</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col3">
+            <div class="item">
+              <div class="zoom">
+                <img src="assets/img/cars/2021-Toyota-Corolla.jpg" />
+              </div>
+              <div class="itemText">
+                <h3>2021 Toyota Corolla</h3>
+                <br>
+                <a href="cardetalis.html" class="btnDetails" id="db_car6">
+                  More Details</a
+                  >
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="featuresBody">
+        <div class="container">
+          <div class="col3">
+            <div class="item">
+              <div class="zoom">
+                <img src="assets/img/cars/2021-Volvo-S60.jpg" />
+              </div>
+              <div class="itemText">
+                <h3>2021 Volvo S60</h3>
+                <br>
+                <a href="cardetalis.html" class="btnDetails" id="db_car7">
+                  More Details</a
+                  >
+              </div>
+            </div>
+          </div>
+          
+          <div class="col3">
+            <div class="item">
+              <div class="zoom">
+                <img src="assets/img/cars/2021-Tesla-Model_3.jpg" />
+              </div>
+              <div class="itemText">
+                <h3>2021 Tesla Model</h3>
+                <br>
+                <a href="cardetalis.html" class="btnDetails" id="db_car8">
+                  More Details</a
+                  >
+                </div>
+              </div>
+          </div>
+          
+          <div class="col3">
+            <div class="item">
+              <div class="zoom">
+                <img src="assets/img/cars/2021-Audi-A4.jpg" />
+              </div>
+              <div class="itemText">
+                <h3>2021 Audi A4</h3>
+                <br>
+                <a href="cardetalis.html" class="btnDetails" id="db_car9">
+                  More Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <title>Footer Design</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </head>
+  <body>
+    
+    <div id="MyClockDisplay" class="clock" onload="showTime()" ></div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <!-- <li><a href="#">privacy policy</a></li> -->
+              <li><a href="#">affiliate program</a></li>
+              <li><a href="loading.php">loding page</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="admin.php">Admin</a></li>
+              <li><a href="login.php">login</a></li>
+              <li><a href="register.php">Register</a></li>
+              <li><a href="cardetalis.html">Car details</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+<!-- Time -->
+    <script>
+      function showTime() {
+        var date = new Date();
+        var h = date.getHours(); // 0 - 23
+        var m = date.getMinutes(); // 0 - 59
+        var s = date.getSeconds(); // 0 - 59
+        var year = date.getFullYear(); // 4-digit year
+        var monthNames = [
+          "January", "February", "March", "April", "May", "June", 
+          "July", "August", "September", "October", "November", "December"
+        ];
+        var month = monthNames[date.getMonth()];
+    
+        if (h == 0) {
+          h = 12;
+        }
+    
+        h = h < 10 ? "0" + h : h;
+        m = m < 10 ? "0" + m : m;
+        s = s < 10 ? "0" + s : s;
+    
+        var time = h + ":" + m + ":" + s;
+        var fullTime = time + " " + month + " " + year;
+    
+        document.getElementById("MyClockDisplay").innerText = fullTime;
+        
+        document.getElementById("MyClockDisplay").textContent = fullTime;
+    
+        setTimeout(showTime, 1000);
+      }
+    
+      showTime();
+    </script>
+    <!-- chatbot -->
+    <script>
+      window.embeddedChatbotConfig = {
+        chatbotId: "OcGtp_6Q0AdTHOrcBkxKT",
+        domain: "www.chatbase.co",
+      };
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="OcGtp_6Q0AdTHOrcBkxKT"
+    domain="www.chatbase.co"
+    defer
+    ></script>
+  </body>
+  </html>
+  

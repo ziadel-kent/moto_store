@@ -1,0 +1,508 @@
+:root {
+  --white: white;
+  --black: black;
+}
+
+body {
+  color: #333;
+  font-family: "Gt america extended 72b5c4b6b939ca4b7304cbbe327bb289", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.product-slider-section {
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 5%;
+  display: flex;
+  position: relative;
+}
+
+.faq-question-wrap {
+  margin-bottom: 35px;
+}
+
+.mask {
+  overflow: hidden;
+}
+
+.icon-3 {
+  color: #4c4172;
+}
+
+.slide-nav {
+  display: none;
+}
+
+.right-arrow {
+  display: none;
+  top: auto;
+  bottom: 0%;
+  left: auto;
+  right: 35%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.arrow {
+  width: 20px;
+}
+
+.left-arrow {
+  display: none;
+  position: absolute;
+  top: auto;
+  bottom: 0%;
+  left: auto;
+  right: 40%;
+}
+
+.slider-left {
+  width: 55px;
+  height: 55px;
+  border: 2px solid #8c54ff;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  display: flex;
+}
+
+.slider-right {
+  width: 55px;
+  height: 55px;
+  border: 2px solid #8c54ff;
+  border-radius: 500px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  display: flex;
+  box-shadow: 1px 1px 55px rgba(0, 22, 50, .08);
+}
+
+.product-slider {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.product-wrap {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.flowbase-navigation {
+  z-index: 99;
+  min-height: 80px;
+  border-bottom: 1px solid rgba(155, 158, 184, .22);
+  justify-content: center;
+  align-items: center;
+  padding: 20px 3%;
+  display: flex;
+  position: relative;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: 0%;
+}
+
+.container-flex-nav {
+  width: 100%;
+  max-width: 1170px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.flowbase-logo {
+  width: 55px;
+}
+
+.button-wrapper {
+  position: relative;
+}
+
+.button-menu {
+  min-height: 50px;
+  min-width: 150px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: black;
+  background-image: linear-gradient(159deg, #8c54ff, #7b41f1);
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all .4s ease-out;
+  display: flex;
+  box-shadow: inset -1px -1px 3px rgba(32, 27, 61, .6), inset 1px 1px 3px rgba(238, 230, 255, .44), 1px 1px 2px #f39c12;
+}
+
+.button-menu:hover {
+  box-shadow: inset 1px 1px 3px rgba(32, 27, 61, .22), inset -1px -1px 3px rgba(238, 230, 255, 0), 1px 1px 2px #f39c12;
+}
+
+.arrow-cta {
+  width: 100px;
+  position: absolute;
+  top: auto;
+  bottom: -120%;
+  left: -20%;
+  right: auto;
+}
+
+.product-card {
+  height: 100%;
+  min-width: 490px;
+  background-color: var(--white);
+  padding: 30px 15px;
+}
+
+.title-wrap {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.product-base {
+  min-height: 250px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 65px;
+  margin-bottom: 65px;
+  display: flex;
+  position: relative;
+}
+
+.product-image {
+  max-width: 150%;
+  position: absolute;
+}
+
+.content-wrap {
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.feature-column {
+  width: 50%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.feature-block {
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.car-icon {
+  width: 25px;
+  margin-right: 14px;
+}
+
+.arrow-right {
+  width: 90px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: 0%;
+}
+
+.arrow-left {
+  width: 90px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: auto;
+  bottom: auto;
+  left: 0;
+  right: auto;
+}
+
+.product-name {
+  color: #151428;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.product-logo {
+  width: 80px;
+  margin-bottom: 8px;
+}
+
+.pricing {
+  color: #151428;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.price-block {
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 25px 30px 25px 15px;
+  display: flex;
+}
+
+.button-block {
+  width: 50%;
+  min-height: 90px;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 15px;
+  display: flex;
+}
+
+.button {
+  min-height: 55px;
+  min-width: 170px;
+  color: #fff;
+  background-color: #f39c12;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  box-shadow: -5px 30px 20px -20px rgba(86, 93, 113, .38);
+}
+
+.pricing-rate {
+  opacity: .5;
+}
+
+.arrow-bottom {
+  display: none;
+}
+
+.flowbase-banner {
+  height: 64px;
+}
+
+@media screen and (max-width: 991px) {
+  .product-slider-section {
+    overflow: hidden;
+  }
+
+  .mask {
+    overflow: visible;
+  }
+
+  .arrow {
+    filter: invert();
+  }
+
+  .slider-left, .slider-right {
+    width: 80px;
+    height: 50px;
+    background-color: grey;
+    border-style: none;
+    border-radius: 0;
+    padding: 7px;
+  }
+
+  .product-card {
+    padding-bottom: 50px;
+    position: relative;
+  }
+
+  .product-base {
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
+
+  .product-image {
+    max-width: 130%;
+  }
+
+  .content-wrap {
+    z-index: 20;
+    position: relative;
+  }
+
+  .arrow-right, .arrow-left {
+    display: none;
+  }
+
+  .arrow-bottom {
+    z-index: 5;
+    height: 50px;
+    background-color: var(--white);
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    display: flex;
+    position: absolute;
+    top: auto;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .product-wrap {
+    flex-direction: column;
+  }
+
+  .product-card {
+    min-width: 80%;
+  }
+
+  .product-base {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .product-image {
+    max-width: 100%;
+  }
+
+  .feature-column {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .product-slider-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .product-base {
+    min-height: 190px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .content-wrap {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .feature-column {
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .feature-block {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 7px 8px;
+  }
+
+  .car-icon {
+    margin-right: 8px;
+  }
+
+  .pricing {
+    font-size: 55px;
+  }
+
+  .price-block {
+    width: 100%;
+    padding: 16px 0;
+  }
+
+  .button-block {
+    width: 100%;
+    min-height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .footer {
+    background-image: none;
+    background-position: 50% 0;
+    background-repeat: repeat-x;
+    background-size: cover;
+  }
+
+  .flowbase-banner {
+    display: none;
+  }
+
+  .flowbase-footer {
+    background-image: none;
+    background-position: 50% 0;
+    background-repeat: repeat-x;
+    background-size: cover;
+  }
+}
+
+
+@font-face {
+  font-family: 'Gt america standard f052b560ddc22d48c131e957d27daf18';
+  src: url('../fonts/GT-America-Standard-Medium-f052b560ddc22d48c131e957d27daf18.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Gt america extended 0dccc988321edda713081904b7cdbcb9';
+  src: url('../fonts/GT-America-Extended-Bold-0dccc988321edda713081904b7cdbcb9.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Gt america extended 72b5c4b6b939ca4b7304cbbe327bb289';
+  src: url('../fonts/GT-America-Extended-Medium-72b5c4b6b939ca4b7304cbbe327bb289.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* Body */
+    .container {
+      margin-top: 10%;
+      display: grid;
+      grid-template-columns: auto;
+      gap: 0px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    hr {
+      height: 1px;
+      background-color: rgba(16, 86, 82, 0.75);
+      border: none;
+    }
+
+    .card {
+      width: 400px;
+      background: rgb(255, 250, 235);
+      box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01),
+        0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09),
+        0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      width: 93%;
+      height: 40px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      border-bottom: 1px solid rgba(16, 86, 82, 0.75);
+      font-weight: 700;
+      font-size: 11px;
+      color: #000000;
+    }
+
+    /* Cart */
+    .cart {
+      border-radius: 19px 19px 0px 0px;
+    }
+
+    .cart .steps {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .cart .steps .step {
+      display: grid;
+      gap: 10px;
+    }
+
+    .cart .steps .step span {
+      font-size: 13px;
+      font-weight: 600;
+      color: #000000;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .cart .steps .step p {
+      font-size: 11px;
+      font-weight: 600;
+      color: #000000;
+    }
+
+    .input_field {
+      width: auto;
+      height: 36px;
+      padding: 0 0 0 12px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid rgb(16, 86, 82);
+      background-color: rgb(251, 243, 228);
+      transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+    }
+
+    .input_field:focus {
+      border: 1px solid transparent;
+      box-shadow: 0px 0px 0px 2px rgb(251, 243, 228);
+      background-color: rgb(201, 193, 178);
+    }
+ 
+    /* Visa */
+
+
+    body {
+    font-family: Arial, sans-serif;
+    /* Specify the font family for the body text */
+    background-color: #f4f4f4;
+    /* Set the background color for the body */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    display: flex;
+    /* Use flex display for column layout */
+    flex-direction: column;
+    /* Set the flex direction to column */
+    align-items: center;
+    /* Center the items along the cross-axis */
+    height: 100vh;
+    /* Set the height to 100% of the viewport height */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      url(./assets/img/653ab9dd1ef121f163c484d03322f1a9.jpg);
+    /* Set a background gradient and image */
+    background-size: 250vh;
+    /* Consider using 'cover' or 'contain' for background-size */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Do not repeat the background image */
+  }
+    .Visa form {
+      display: grid;
+      grid-template-columns: 1fr 80px;
+      gap: 10px;
+      padding: 0px;
+    }
+
+    /* address */
+    .address form {
+      display: grid;
+      grid-template-columns: 1fr 80px;
+      gap: 10px;
+      padding: 0px;
+    }
+
+    /* Promo */
+    .promo form {
+      display: grid;
+      grid-template-columns: 1fr 80px;
+      gap: 10px;
+      padding: 0px;
+    }
+
+    /* Checkout */
+    .payments .details {
+      display: grid;
+      grid-template-columns: 10fr 1fr;
+      padding: 0px;
+      gap: 5px;
+    }
+
+    .payments .details span:nth-child(odd) {
+      font-size: 12px;
+      font-weight: 600;
+      color: #000000;
+      margin: auto auto auto 0;
+    }
+
+    .payments .details span:nth-child(even) {
+      font-size: 13px;
+      font-weight: 600;
+      color: #000000;
+      margin: auto 0 auto auto;
+    }
+
+    .checkout .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 10px 10px 20px;
+      background-color:black;
+      color: orange;
+    }
+
+    .price {
+      position: relative;
+      font-size: 22px;
+      color: grey;
+      font-weight: 900;
+    }
+
+    .checkout .checkout-btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 36px;
+      background: rgba(16, 86, 82, 0.55);
+      box-shadow: 0px 0.5px 0.5px rgba(16, 86, 82, 0.75),
+        0px 1px 0.5px rgba(16, 86, 82, 0.75);
+      border-radius: 7px;
+      border: 1px solid rgb(16, 86, 82);
+      color: grey;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+    }
+
+    @media (max-width: 991px) {
+      .container {
+        margin-top: 15%;
+        margin-left: 50%;
+        margin-right: 50%;
+      }
+      .card {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 725px) {
+      .container {
+        margin-top: 20%;
+        margin-left: 50%;
+        margin-right: 50%;
+      }
+      .card {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .container {
+        margin-top: 35%;
+        margin-left: 50%;
+        margin-right: 50%;
+      }
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="card cart">
+        <label class="title">CHECKOUT</label>
+        <div class="steps">
+          <div class="step">
+            <div class="address">
+              <form action="includes/cartHandler.php" method="post">
+                <div class="address">
+                    <span>SHIPPING</span>
+                    <input type="text" id="SHIPPING" name="SHIPPING" placeholder="Enter your address" class="input_field" />
+                </div>
+                <hr />
+                <div class="Visa">
+                    <span>PAYMENT METHOD</span>
+                    <span>Visa</span>
+                    <input type="visa" id="PAYMENT_METHOD" name="PAYMENT_METHOD" placeholder="Enter your visa number" class="input_field" />
+                </div>
+                <hr />
+                <div class="promo">
+                    <span>Date</span>
+                    <input type="date" id="Date" name="Date" placeholder="Enter the date" class="input_field" />
+                </div>
+                <hr />
+                <div class="payments">
+                    <span>PAYMENT</span>
+                    <div class="details">
+                        <span>Subtotal:</span>
+                        <input type="text" name="Subtotal" id="Subtotal">
+                        <!-- Add Tax input if needed -->
+                        <!-- <span>Tax:</span>
+                        <input type="none" name="Tax" id="Tax"> -->
+                    </div>
+                </div>
+                <input type="submit" />
+            </form>
+            
+                </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card checkout">
+        <div class="footer">
+
+
+</body>
+</html>
+          <label class="price">$199</label>
+          <a href="index.html" 
+            ><button class="checkout-btn">Checkout</button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Wait for the document to be fully loaded
+
+        // Find the Checkout button by its class
+        var checkoutBtn = document.querySelector(".checkout-btn");
+
+        // Add a click event listener to the Checkout button
+        checkoutBtn.addEventListener("click", function () {
+          // Display an alert when the button is clicked
+          alert("Checked out successfully!");
+        });
+      });
+    </script>
+        <script>
+          window.embeddedChatbotConfig = {
+            chatbotId: "OcGtp_6Q0AdTHOrcBkxKT",
+            domain: "www.chatbase.co",
+          };
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="OcGtp_6Q0AdTHOrcBkxKT"
+        domain="www.chatbase.co"
+        defer
+        ></script>
+  </body>
+</html>
